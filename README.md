@@ -2,7 +2,9 @@
 
 diffrent examples of frontend integration and server-side php code.
 
-**Caution***
+![image](image.png)
+
+**Caution**
 
 this repository conains only examples to demonstrate the frontend integration and api usage.
 
@@ -10,6 +12,9 @@ this repository conains only examples to demonstrate the frontend integration an
 
 - copy config.template.php and rename to config.php
 - insert your client id and slient secret from paypal or paypal sandbox
+  - login your developer account https://developer.paypal.com/
+  - menu 'Apps & Credentials'
+  - create a app
 
 ## Links
 
