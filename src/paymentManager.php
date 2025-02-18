@@ -10,10 +10,10 @@ class paymentManager
     public function getJsSrc($buyerCountry = 'DE', $currency = 'EUR')
     {
         $clientId = $this->config['client_id'];
-        $components = implode(',', ['buttons', 'card-fields', 'funding-eligibility', 'marks']);
+        $components = implode(',', ['buttons', 'card-fields', 'funding-eligibility', 'marks', 'legal']);
         $enableFunding = implode(',', ['venmo', 'paylater', 'card', 'sofort']);
 
-        return "https://www.paypal.com/sdk/js?client-id={$clientId}&buyer-country={$buyerCountry}&currency={$currency}&components={$components}&enable-funding={$enableFunding}";
+        return "https://www.paypal.com/sdk/js?client-id={$clientId}&buyer-country={$buyerCountry}&currency={$currency}&components={$components}&enable-funding={$enableFunding}&debug=true";
     }
 
     /**

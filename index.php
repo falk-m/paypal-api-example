@@ -29,6 +29,9 @@ $url = $paymentManager->getJsSrc();
         <li>
             <a href="/standalone_radio.php">render buttons when need</a>
         </li>
+        <li>
+            <a href="/card.php">advanced card form</a>
+        </li>
     </ul>
 
     <div id="paypal-button-container"></div>
@@ -36,6 +39,9 @@ $url = $paymentManager->getJsSrc();
 
     paypal-marks-container
     <div id="paypal-marks-container"></div>
+
+    paypal-legal-container
+    <div id="paypal-legal-container"></div>
 
     <!-- Initialize the JS-SDK -->
     <script src="<?php echo $url ?>"></script>
@@ -89,6 +95,12 @@ $url = $paymentManager->getJsSrc();
                 //displayOnly: ['']
             })
             .render("#paypal-button-container");
+
+        paypal
+            .Legal({
+                fundingSource: paypal.Legal.FUNDING.PAY_UPON_INVOICE,
+            })
+            .render("#paypal-legal-container");
     </script>
 
 </body>
